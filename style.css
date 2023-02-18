@@ -44,6 +44,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     width: 35rem;
     margin: 0 2rem;
+    animation: moveInRight 1.5s ease-out;
 }
 
 .icon {
@@ -52,7 +53,7 @@ body {
 }
 
 .icon svg path {
-    stroke: #333333;
+    stroke: #111;
 }
 
 .dashes-box {
@@ -61,11 +62,17 @@ body {
     gap: 1rem;
     align-items: center;
     margin: 0 1rem;
+    animation: moveInBottom 1.5s ease-out;
 }
 
 .dash {
     height: 6rem;
     width: 0.2rem;
+    transition: all 0.5s;
+}
+
+.dash:hover {
+    height: 9rem;
 }
 
 .first-dash {
@@ -94,6 +101,7 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     margin: 0 2rem;
+    animation: moveInLeft 1.5s ease-out;
 }
 
 .img-box img {
@@ -104,9 +112,25 @@ body {
 }
 
 .img-box img:hover {
-    border-radius: 40%;
+    border-radius: 50%;
     height: 24rem;
     width: 24rem;
+}
+
+h1 {
+    transition: all 0.5s;
+}
+
+h1:hover {
+    font-size: 4rem;
+}
+
+h2 span{
+    transition: all 0.5s;
+}
+
+h2 span:hover {
+    font-size: 3rem;
 }
 
 
