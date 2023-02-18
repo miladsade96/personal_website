@@ -99,6 +99,62 @@ body {
 .img-box img {
     height: 22rem;
     width: 22rem;
-    border-radius: 50%;
-    border: 1px solid rgba(147, 163, 215, 0.3);
+    border-radius: 20%;
+    transition: all 0.5s;
+}
+
+.img-box img:hover {
+    border-radius: 40%;
+    height: 24rem;
+    width: 24rem;
+}
+
+
+/* KeyFrames */
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-130px);
+    }
+
+    70% {
+        opacity: 100;
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(130px);
+    }
+
+    70% {
+        opacity: 100;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-130px);
+    }
+
+    70% {
+        opacity: 100;
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
