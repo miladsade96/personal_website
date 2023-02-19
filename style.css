@@ -50,6 +50,43 @@ body {
 .icon {
     width: 8rem;
     height: 8rem;
+    cursor: pointer;
+    background-color: rgba(152, 152, 152, 0.03);
+    border-radius: 50%;
+    padding: 0.9rem;
+    transition: all 1s;
+}
+
+.icon.mail:hover svg path {
+    stroke: #0364b8;
+}
+
+.icon.linkedin:hover svg path {
+    stroke: #0a66cd;
+}
+
+.icon.github:hover svg path {
+    stroke: #ad5c51;
+}
+
+.icon.twitter:hover svg path {
+    stroke: #1d9bf0;
+}
+
+.icon.codepen:hover svg path {
+    stroke: #7a7474;
+}
+
+.icon.leetcode:hover svg path {
+    stroke: #c97801;
+}
+
+.icon.blog:hover svg path {
+    stroke: #0023ce;
+}
+
+.icon.telegram:hover svg path {
+    stroke: #2aabee;
 }
 
 .icon svg path {
