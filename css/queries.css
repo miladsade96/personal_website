@@ -1,5 +1,75 @@
 /* Media Queries */
 
+/***********************************/
+/* Below 768px (Landscape Tablets) */
+/***********************************/
+@media (max-width: 48rem) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        max-width: 90rem;
+    }
+
+    #codingVideo {
+        filter: blur(1px);
+    }
+
+    .left-box {
+        width: 30rem;
+    }
+
+    .icon {
+        width: 6rem;
+        height: 6rem;
+        padding: 0 0.2rem;
+    }
+
+    .dash {
+        height: 5.1rem;
+        width: 0.15rem;
+    }
+
+    .dash:hover {
+        height: 7.5rem;
+        cursor: pointer;
+    }
+
+    .right-box {
+        width: 30rem;
+        gap: 1.3rem;
+    }
+
+    .img-box img {
+        height: 18rem;
+        width: 18rem;
+    }
+
+    .img-box img:hover {
+        border-radius: 50%;
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .img-box img:hover {
+        height: 21rem;
+        width: 21rem;
+    }
+
+    h1:hover {
+        font-size: 3.3rem;
+    }
+
+    h2 span:hover {
+        font-size: 2.3rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
 /* KeyFrames */
 @keyframes graduallyAppearance {
     0% {
