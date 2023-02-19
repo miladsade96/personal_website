@@ -110,6 +110,7 @@ body {
 
 .dash:hover {
     height: 9rem;
+    cursor: pointer;
 }
 
 .first-dash {
@@ -160,6 +161,7 @@ h1 {
 
 h1:hover {
     font-size: 4rem;
+    cursor: pointer;
 }
 
 h2 span{
@@ -168,6 +170,7 @@ h2 span{
 
 h2 span:hover {
     font-size: 3rem;
+    cursor: pointer;
 }
 
 footer {
@@ -180,6 +183,10 @@ footer {
     color: #888;
 }
 
+p a {
+    color: #777;
+    text-decoration: none;
+}
 
 /* KeyFrames */
 @keyframes moveInRight {
