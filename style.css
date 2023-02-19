@@ -44,7 +44,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     width: 35rem;
     margin: 0 2rem;
-    animation: moveInRight 1.5s ease-out;
+    animation: moveInRight 1s ease-out;
 }
 
 .icon {
@@ -62,7 +62,7 @@ body {
     gap: 1rem;
     align-items: center;
     margin: 0 1rem;
-    animation: moveInBottom 1.5s ease-out;
+    animation: moveInBottom 1s ease-out;
 }
 
 .dash {
@@ -101,7 +101,7 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     margin: 0 2rem;
-    animation: moveInLeft 1.5s ease-out;
+    animation: moveInLeft 1s ease-out;
 }
 
 .img-box img {
