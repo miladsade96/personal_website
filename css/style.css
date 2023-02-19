@@ -156,6 +156,7 @@ body {
 }
 
 h1 {
+    font-size: 3rem;
     transition: all 0.5s;
 }
 
@@ -165,12 +166,17 @@ h1:hover {
 }
 
 h2 span{
+    font-size: 2rem;
     transition: all 0.5s;
 }
 
 h2 span:hover {
     font-size: 3rem;
     cursor: pointer;
+}
+
+span {
+    display: inline-block;
 }
 
 footer {
