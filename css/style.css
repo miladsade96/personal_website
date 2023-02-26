@@ -82,7 +82,7 @@ body {
 }
 
 .icon.blog:hover svg path {
-    stroke: #0023ce;
+    stroke: #66cdaa;
 }
 
 .icon.telegram:hover svg path {
