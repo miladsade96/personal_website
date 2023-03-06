@@ -57,7 +57,10 @@ body {
     background-color: rgba(152, 152, 152, 0.03);
     border-radius: 50%;
     padding: 0.9rem;
-    transition: all 1s;
+}
+
+.icon svg path {
+    transition: all 0.35s;
 }
 
 .icon.mail:hover svg path {
