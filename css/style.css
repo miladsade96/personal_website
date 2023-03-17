@@ -8,6 +8,8 @@
 html {
     font-size: 62.5%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
@@ -16,6 +18,8 @@ body {
     font-size: 1.8rem;
     line-height: 1.2;
     color: #111;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -111,7 +115,12 @@ body {
 .dash {
     height: 6rem;
     width: 0.2rem;
-    transition: all 0.5s;
+    transition: all 0.2s;
+}
+
+.dash:hover {
+    height: 8rem;
+    cursor: pointer;
 }
 
 .first-dash {
