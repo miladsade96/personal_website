@@ -32,13 +32,13 @@ body {
     margin: 0 auto;
 }
 
-
 .left-box {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 35rem;
+    width: 36rem;
     margin: 0 2rem;
     animation: moveInRight 1s ease-out;
+    justify-items: center;
 }
 
 .icon__box {
@@ -48,9 +48,8 @@ body {
 
 .icon {
     cursor: pointer;
-    background-color: rgba(152, 152, 152, 0.03);
-    border-radius: 50%;
-    padding: 0.9rem;
+    height: 6rem;
+    width: 6rem;
 }
 
 .icon svg path {
@@ -96,9 +95,8 @@ body {
 .dashes-box {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
     align-items: center;
-    margin: 0 1rem;
     animation: moveInBottom 1s ease-out;
 }
 
