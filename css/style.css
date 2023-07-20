@@ -154,6 +154,10 @@ body {
     width: 24rem;
 }
 
+.aka {
+    font-family: "Tektur", serif;
+}
+
 h1 {
     font-size: 3rem;
     transition: all 0.2s;
