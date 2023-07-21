@@ -192,13 +192,17 @@ span {
     display: inline-block;
 }
 
+.aka {
+    font-family: "Tajawal", serif;
+}
+
 footer {
     position: fixed;
     bottom: 2px;
     left: 50%;
     transform: translateX(-50%);
     font-family: sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #888;
 }
 
