@@ -28,6 +28,17 @@ body {
 	height: 100vh;
 }
 
+#codingVideo {
+	position: fixed;
+	left: 0;
+	top: 0;
+	min-width: 100%;
+	min-height: 100%;
+	background-size: cover;
+	filter: blur(4px);
+	z-index: -1;
+}
+
 .container {
 	height: 100vh;
 	max-width: 110rem;
