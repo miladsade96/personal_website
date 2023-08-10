@@ -57,35 +57,35 @@ body {
 }
 
 .icon.mail:hover svg path {
-    stroke: #0364b8;
+    fill: #0364b8;
 }
 
 .icon.linkedin:hover svg path {
-    stroke: #0a66cd;
+    fill: #0a66cd;
 }
 
 .icon.github:hover svg path {
-    stroke: #ad5c51;
+    fill: #9404c4;
 }
 
 .icon.twitter:hover svg path {
-    stroke: #1d9bf0;
-}
-
-.icon.codepen:hover svg path {
-    stroke: #7a7474;
+    fill: #1d9bf0;
 }
 
 .icon.leetcode:hover svg path {
-    stroke: #c97801;
+    fill: #c97801;
 }
 
 .icon.blog:hover svg path {
-    stroke: #f03e3e;
+    fill: #ead706;
 }
 
 .icon.telegram:hover svg path {
-    stroke: #2aabee;
+    fill: #0a84c4;
+}
+
+.icon.resume:hover svg path {
+    fill: #032c92;
 }
 
 .icon svg path {
