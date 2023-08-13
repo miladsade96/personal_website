@@ -15,28 +15,12 @@ body {
 	font-weight: 400;
 	font-size: 1.8rem;
 	line-height: 1.2;
-
-	background: transparent;
-	/*background: linear-gradient(*/
-	/*	-45deg,*/
-	/*	rgba(238, 119, 82, 0.5),*/
-	/*	rgba(231, 60, 126, 0.5),*/
-	/*	rgba(35, 166, 213, 0.5),*/
-	/*	rgba(35, 213, 171, 0.5)*/
-	/*);*/
-	/*background-size: 400% 400%;*/
 	animation: gradient 15s ease infinite;
 	height: 100vh;
 }
 
-#codingVideo {
-	position: fixed;
-	left: 0;
-	top: 0;
-	min-width: 100%;
-	min-height: 100%;
-	background-size: cover;
-	filter: blur(4px);
+#canvas {
+	position: absolute;
 	z-index: -1;
 }
 
@@ -48,7 +32,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
-	z-index: 100;
+	z-index: 1;
 }
 
 .left-box {
