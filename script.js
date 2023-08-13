@@ -111,7 +111,7 @@ function DrawClear(x, y) {
 
 function DrawKernel() {
 	DrawClear(dimension[0], dimension[1]);
-	for (let i = 0; i <= 500; i += 6) {
+	for (let i = 0; i <= 54; i += 6) {
 		ctx.beginPath();
 
 		ctx.font = ctx.font.replace(/\d+px/, position[i + 2] + 30 + "px");
