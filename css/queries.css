@@ -40,13 +40,7 @@
 
 	.img-box img:hover {
 		border-radius: 50%;
-		height: 20rem;
-		width: 20rem;
-	}
-
-	.img-box img:hover {
-		height: 21rem;
-		width: 21rem;
+		transform: scale(1.1);
 	}
 
 	footer {
