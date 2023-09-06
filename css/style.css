@@ -63,6 +63,7 @@ body {
 
 .icon svg path {
 	transition: all 0.35s;
+	fill: #212529;
 }
 
 .icon.mail:hover svg path {
