@@ -24,6 +24,11 @@ body {
 	z-index: -1;
 }
 
+::selection {
+	color: #00539c;
+	background-color: #eea47f;
+}
+
 .container {
 	height: 100vh;
 	max-width: 110rem;
