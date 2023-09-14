@@ -155,13 +155,13 @@ body {
 .img-box img {
 	height: 22rem;
 	width: auto;
-	border-radius: 25%;
+	border-radius: 10%;
 	transition: all 0.5s;
 	backdrop-filter: blur(3px);
 }
 
 .img-box img:hover {
-	border-radius: 50%;
+	border-radius: 40%;
 	transform: scale(1.1);
 }
 
