@@ -156,7 +156,7 @@ function RandomNumber(first, last) {
 // console.log(top_, left_, right_, bottom_);
 
 function RandomPosition(l) {
-	for (let i = 0; i <= 3600; i += 6) {
+	for (let i = 0; i <= 50; i += 6) {
 		position[i] = RandomNumber(0, dimension[0]);
 		position[i + 1] = RandomNumber(0, dimension[1]);
 		position[i + 2] = RandomNumber(0, 15);
@@ -172,7 +172,7 @@ function DrawClear(x, y) {
 
 function DrawKernel() {
 	DrawClear(dimension[0], dimension[1]);
-	for (let i = 0; i <= 100; i += 6) {
+	for (let i = 0; i <= 25; i += 6) {
 		ctx.beginPath();
 
 		ctx.font = ctx.font.replace(/\d+px/, position[i + 2] + 30 + "px");
