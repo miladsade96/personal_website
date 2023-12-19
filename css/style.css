@@ -147,22 +147,13 @@ body {
 	display: flex;
 	width: 35rem;
 	flex-direction: column;
-	gap: 1.5rem;
 	margin: 0 2rem;
 	animation: moveInLeft 1s ease-out;
 }
 
-.img-box img {
+.img-box svg {
 	height: 22rem;
 	width: auto;
-	border-radius: 10%;
-	transition: all 0.5s;
-	backdrop-filter: blur(3px);
-}
-
-.img-box img:hover {
-	border-radius: 40%;
-	transform: scale(1.1);
 }
 
 h1 {
