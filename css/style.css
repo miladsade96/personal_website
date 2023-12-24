@@ -83,7 +83,7 @@ body {
 }
 
 .icon.leetcode:hover svg path {
-	fill: #fb5607;
+	fill: #ea4c05;
 }
 
 .icon.blog:hover svg path {
@@ -95,7 +95,7 @@ body {
 }
 
 .icon.resume:hover svg path {
-	fill: #00509d;
+	fill: #13b402;
 }
 
 .icon svg path {
