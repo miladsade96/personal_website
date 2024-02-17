@@ -16,7 +16,7 @@ body {
 	font-size: 1.8rem;
 	line-height: 1.2;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
+	height: 100dvh;
 }
 
 #canvas {
@@ -151,9 +151,22 @@ body {
 	animation: moveInLeft 1s ease-out;
 }
 
-.img-box svg {
+.img-box {
+	margin-bottom: 2.5rem;
+}
+
+.img-box img {
 	height: 22rem;
 	width: auto;
+	border-radius: 3rem;
+	transition: all 0.3s ease-in;
+	filter: grayscale(100%);
+}
+
+.img-box img:hover {
+	filter: grayscale(0);
+	scale: 1.1;
+	border-radius: 8rem;
 }
 
 h1 {
@@ -174,12 +187,13 @@ span {
 }
 
 footer {
+	max-width: 600px;
 	position: fixed;
 	bottom: 2px;
 	left: 50%;
 	transform: translateX(-50%);
 	font-family: "JetBrains Mono", sans-serif;
-	font-size: 1.5rem;
+	font-size: 1.15rem;
 	color: rgba(136, 136, 136, 0.55);
 }
 
