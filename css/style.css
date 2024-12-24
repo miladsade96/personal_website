@@ -204,6 +204,10 @@ p a {
 	text-decoration: underline;
 }
 
+.text-box {
+	margin-left: 30px;
+}
+
 /* KeyFrames */
 @keyframes moveInRight {
 	0% {
