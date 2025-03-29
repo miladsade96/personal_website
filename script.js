@@ -1,144 +1,8 @@
 "use strict";
 
-const dynamicYear = new Date().getFullYear();
-document.querySelector(".year").textContent = String(dynamicYear);
-
-let ctx;
-const dimension = [document.documentElement.clientWidth, document.documentElement.clientHeight];
-const keywords = [
-	"Milad",
-	"Milad Sadeghi",
-	"miladsade96",
-	"JAVA",
-	"java",
-	"Java SE",
-	"Java EE",
-	"Jakarta",
-	"JVM",
-	"JRE",
-	"JDK",
-	"JDBC",
-	"SQL",
-	"NoSQL",
-	"MySQL",
-	"PostgreSQL",
-	"OracleDB",
-	"H2",
-	"Spring",
-	"Spring Framework",
-	"Spring Boot",
-	"Spring Data JPA",
-	"Spring MVC",
-	"Hibernate",
-	"ORM",
-	"RestAPI",
-	"API Design",
-	"GraphQL",
-	"Microservices",
-	"MicroService Architecture",
-	"VSC",
-	"Git",
-	"GitHub",
-	"GitLab",
-	"Maven",
-	"Gradle",
-	"JUnit",
-	"Mockito",
-	"Docker",
-	"Kubernetes",
-	"Apache Kafka",
-	"Kafka",
-	"Prometheus",
-	"Grafana",
-	"Linux",
-	"Linux OS",
-	"CI/CD",
-	"Continuous Integration",
-	"Continuous Development",
-	"Continuous Delivery",
-	"Algorithms",
-	"Data Structures",
-	"Agile",
-	"Scrum",
-	"Jira",
-	"Collaboration",
-	"Communication",
-	"Remote Development",
-	"Self Motivation",
-	"Web Development",
-	"JetBrains",
-	"IntelliJ IDE",
-	"VSCode",
-	"Backend",
-	"K6",
-	"Milad",
-	"Milad Sadeghi",
-	"miladsade96",
-	"JAVA",
-	"java",
-	"Java SE",
-	"Java EE",
-	"Jakarta",
-	"JVM",
-	"JRE",
-	"JDK",
-	"JDBC",
-	"SQL",
-	"NoSQL",
-	"MySQL",
-	"PostgreSQL",
-	"OracleDB",
-	"H2",
-	"Spring",
-	"Spring Framework",
-	"Spring Boot",
-	"Spring Data JPA",
-	"Spring MVC",
-	"Hibernate",
-	"ORM",
-	"RestAPI",
-	"API Design",
-	"GraphQL",
-	"Microservices",
-	"MicroService Architecture",
-	"VSC",
-	"Git",
-	"GitHub",
-	"GitLab",
-	"Maven",
-	"Gradle",
-	"JUnit",
-	"Mockito",
-	"Docker",
-	"Kubernetes",
-	"Apache Kafka",
-	"Kafka",
-	"Prometheus",
-	"Grafana",
-	"Linux",
-	"Linux OS",
-	"CI/CD",
-	"Continuous Integration",
-	"Continuous Development",
-	"Continuous Delivery",
-	"Algorithms",
-	"Data Structures",
-	"Agile",
-	"Scrum",
-	"Jira",
-	"Collaboration",
-	"Communication",
-	"Remote Development",
-	"Self Motivation",
-	"Web Development",
-	"JetBrains",
-	"IntelliJ IDE",
-	"VSCode",
-	"Backend",
-	"K6",
-];
-
-const brushes = [
+// Constants
+const CURRENT_YEAR = new Date().getFullYear();
+const BRUSHES = [
 	"#16a085",
 	"#27ae60",
 	"#2980b9",
@@ -148,79 +12,166 @@ const brushes = [
 	"#e67e22",
 	"#c0392b",
 ];
-const position = [];
+const KEYWORDS = [
+	"Milad",
+	"Milad Sadeghi",
+	"miladsade96",
+	"JAVA",
+	"java",
+	"Java SE",
+	"Java EE",
+	"Jakarta",
+	"JVM",
+	"JRE",
+	"JDK",
+	"JDBC",
+	"SQL",
+	"NoSQL",
+	"MySQL",
+	"PostgreSQL",
+	"OracleDB",
+	"H2",
+	"Spring",
+	"Spring Framework",
+	"Spring Boot",
+	"Spring Data JPA",
+	"Spring MVC",
+	"Hibernate",
+	"ORM",
+	"RestAPI",
+	"API Design",
+	"GraphQL",
+	"Microservices",
+	"MicroService Architecture",
+	"VSC",
+	"Git",
+	"GitHub",
+	"GitLab",
+	"Maven",
+	"Gradle",
+	"JUnit",
+	"Mockito",
+	"Docker",
+	"Kubernetes",
+	"Apache Kafka",
+	"Kafka",
+	"Prometheus",
+	"Grafana",
+	"Linux",
+	"Linux OS",
+	"CI/CD",
+	"Continuous Integration",
+	"Continuous Development",
+	"Continuous Delivery",
+	"Algorithms",
+	"Data Structures",
+	"Agile",
+	"Scrum",
+	"Jira",
+	"Collaboration",
+	"Communication",
+	"Remote Development",
+	"Self Motivation",
+	"Web Development",
+	"JetBrains",
+	"IntelliJ IDE",
+	"VSCode",
+	"Backend",
+	"K6",
+];
 
-function RandomNumber(first, last) {
-	const choices = last - first;
-	return Math.floor(Math.random() * choices + first);
-}
+// DOM Elements
+const yearElement = document.querySelector(".year");
+const canvas = document.getElementById("canvas");
 
-// const element = document.querySelector(".right-box");
-// const rect = element.getBoundingClientRect();
-//
-// const top_ = rect.top;
-// const left_ = rect.left;
-// const right_ = rect.right;
-// const bottom_ = rect.bottom;
-// console.log(top_, left_, right_, bottom_);
+// State
+let ctx;
+let dimension = [window.innerWidth, window.innerHeight];
+let particles = [];
 
-function RandomPosition(l) {
-	for (let i = 0; i <= 50; i += 6) {
-		position[i] = RandomNumber(0, dimension[0]);
-		position[i + 1] = RandomNumber(0, dimension[1]);
-		position[i + 2] = RandomNumber(0, 15);
-		position[i + 3] = RandomNumber(0, 44 + l);
-		position[i + 4] = RandomNumber(0, 8);
-		position[i + 5] = RandomNumber(0, 100) / 100;
+// Utility Functions
+const randomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min);
+
+// Particle Class
+class Particle {
+	constructor() {
+		this.reset();
+		this.x = randomNumber(0, dimension[0]);
+		this.y = randomNumber(0, dimension[1]);
 	}
-}
 
-function DrawClear(x, y) {
-	ctx.clearRect(0, 0, x, y);
-}
+	reset() {
+		this.x = randomNumber(0, dimension[0]);
+		this.y = randomNumber(0, dimension[1]);
+		this.size = randomNumber(0, 15);
+		this.keywordIndex = randomNumber(0, KEYWORDS.length);
+		this.brushIndex = randomNumber(0, BRUSHES.length);
+		this.opacity = Math.random();
+		this.speed = randomNumber(1, 5) / 100;
+	}
 
-function DrawKernel() {
-	DrawClear(dimension[0], dimension[1]);
-	for (let i = 0; i <= 25; i += 6) {
-		ctx.beginPath();
-
-		ctx.font = ctx.font.replace(/\d+px/, position[i + 2] + 30 + "px");
-		ctx.globalAlpha = position[i + 5];
-		ctx.strokeStyle = brushes[position[i + 4]].toString();
-		ctx.strokeText(keywords[position[i + 3]], position[i], position[i + 1]);
-		ctx.closePath();
-		ctx.stroke();
-
-		position[i + 5] -= RandomNumber(0, 100) / 1000;
-		if (position[i + 5] < 0) {
-			position[i] = RandomNumber(0, dimension[0]);
-			position[i + 1] = RandomNumber(0, dimension[1]);
-			position[i + 2] = RandomNumber(0, 15);
-			position[i + 3] = RandomNumber(0, 64);
-			position[i + 4] = RandomNumber(0, 8);
-			position[i + 5] = RandomNumber(0, 100) / 100;
+	update() {
+		this.opacity -= this.speed;
+		if (this.opacity <= 0) {
+			this.reset();
 		}
 	}
-}
 
-const canvas = document.getElementById("canvas");
-function StartBackground() {
-	canvas.width = dimension[0];
-	canvas.height = dimension[1];
-	if (canvas.getContext) {
-		ctx = canvas.getContext("2d");
-		RandomPosition(20);
-		setInterval(DrawKernel, 100);
+	draw() {
+		ctx.beginPath();
+		ctx.font = `${this.size + 30}px sans-serif`;
+		ctx.globalAlpha = this.opacity;
+		ctx.strokeStyle = BRUSHES[this.brushIndex];
+		ctx.strokeText(KEYWORDS[this.keywordIndex], this.x, this.y);
+		ctx.closePath();
 	}
 }
 
-StartBackground();
+// Canvas Functions
+function initCanvas() {
+	canvas.width = dimension[0];
+	canvas.height = dimension[1];
 
-function ReCalculateCanvasSize() {
-	dimension[0] = document.documentElement.clientWidth;
-	dimension[1] = document.documentElement.clientHeight;
+	if (canvas.getContext) {
+		ctx = canvas.getContext("2d");
+		initParticles();
+		startAnimation();
+	}
+}
+
+function initParticles() {
+	particles = [];
+	for (let i = 0; i < 5; i++) {
+		particles.push(new Particle());
+	}
+}
+
+function clearCanvas() {
+	ctx.clearRect(0, 0, dimension[0], dimension[1]);
+}
+
+function animate() {
+	clearCanvas();
+	particles.forEach(particle => {
+		particle.update();
+		particle.draw();
+	});
+	requestAnimationFrame(animate);
+}
+
+function startAnimation() {
+	// Use requestAnimationFrame for smoother animation
+	requestAnimationFrame(animate);
+}
+
+function handleResize() {
+	dimension[0] = window.innerWidth;
+	dimension[1] = window.innerHeight;
 	canvas.width = dimension[0];
 	canvas.height = dimension[1];
 }
 
-window.addEventListener("resize", ReCalculateCanvasSize);
+// Initialize
+yearElement.textContent = CURRENT_YEAR;
+window.addEventListener("resize", handleResize);
+window.addEventListener("load", initCanvas);
