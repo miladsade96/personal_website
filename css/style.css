@@ -67,35 +67,35 @@ body {
 }
 
 .icon.mail:hover svg path {
-	fill: #ff006e;
+	fill: #2b579a;
 }
 
 .icon.linkedin:hover svg path {
-	fill: #0a66cd;
+	fill: #0077b5;
 }
 
 .icon.github:hover svg path {
-	fill: #8338ec;
-}
-
-.icon.twitter:hover svg path {
-	fill: #1d9bf0;
+	fill: #6e5494;
 }
 
 .icon.leetcode:hover svg path {
-	fill: #ea4c05;
+	fill: #ffa116;
 }
 
 .icon.blog:hover svg path {
-	fill: #ffbe0b;
+	fill: #2962ff;
+}
+
+.icon.virgool:hover svg path {
+	fill: #008080;
 }
 
 .icon.telegram:hover svg path {
-	fill: #3a86ff;
+	fill: #0088cc;
 }
 
 .icon.resume:hover svg path {
-	fill: #13b402;
+	fill: #d24726;
 }
 
 .icon svg path {
