@@ -90,8 +90,8 @@ body {
 	fill: #008080;
 }
 
-.icon.telegram:hover svg path {
-	fill: #0088cc;
+.icon.hackerrank:hover svg path {
+	fill: #2ec866;
 }
 
 .icon.resume:hover svg path {
