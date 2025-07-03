@@ -5,13 +5,13 @@
 /* Keyframes - Placed at the top for better organization */
 @keyframes gradient {
 	0% {
-		background-position: 0% 50%;
+		background-position: 0 50%;
 	}
 	50% {
 		background-position: 100% 50%;
 	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 0 50%;
 	}
 }
 
@@ -28,7 +28,7 @@
 /* Large desktop: 1056px (66em) and above - base styles */
 
 /* Desktop: 1056px (66em) to 968px (60.5em) */
-@media (max-width: 66em) {
+@media (max-width: 67em) {
 	html {
 		font-size: 100%;
 	}
@@ -39,14 +39,14 @@
 }
 
 /* Small desktop/tablet landscape: 968px (60.5em) to 832px (52em) */
-@media (max-width: 60.5em) {
+@media (max-width: 61.5em) {
 	html {
 		font-size: 85%;
 	}
 }
 
 /* Tablet portrait: 832px (52em) to 540px (33.75em) */
-@media (max-width: 52em) {
+@media (max-width: 52.5em) {
 	html {
 		font-size: 100%;
 	}
@@ -76,13 +76,18 @@
 	}
 
 	footer p {
-		font-size: 0.9rem; /* Slightly more readable */
+		font-size: 0.8rem; /* Slightly more readable */
 		text-align: center;
+	}
+
+	.icon__box {
+		padding: 0;
+		margin-bottom: 10px;
 	}
 }
 
 /* Large mobile: 540px (33.75em) to 432px (27em) */
-@media (max-width: 33.75em) {
+@media (max-width: 34em) {
 	html {
 		font-size: 87%;
 	}
@@ -93,7 +98,7 @@
 }
 
 /* Medium mobile: 432px (27em) to 416px (26em) */
-@media (max-width: 27em) {
+@media (max-width: 27.5em) {
 	html {
 		font-size: 83%;
 	}
@@ -108,7 +113,7 @@
 }
 
 /* Small mobile: 416px (26em) to 384px (24em) */
-@media (max-width: 26em) {
+@media (max-width: 26.5em) {
 	html {
 		font-size: 78%;
 	}
@@ -119,7 +124,7 @@
 }
 
 /* Extra small mobile: below 384px (24em) */
-@media (max-width: 24em) {
+@media (max-width: 24.5em) {
 	html {
 		font-size: 68%;
 	}
