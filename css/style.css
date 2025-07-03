@@ -53,9 +53,19 @@ body {
 
 .icon__box {
 	display: flex;
-	margin: 1rem;
+	flex-direction: column;
+	margin: 0.5rem;
 	justify-content: center;
 	align-items: center;
+	padding: 1rem;
+	/*padding-bottom: 5px;*/
+}
+
+.icon__label {
+	text-align: center;
+	/*margin-top: 0.5rem;*/
+	font-size: 1rem;
+	color: #333; /* or any color you prefer */
 }
 
 .icon {
