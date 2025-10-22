@@ -103,11 +103,11 @@ class Particle {
 	reset() {
 		this.x = randomNumber(0, dimension[0]);
 		this.y = randomNumber(0, dimension[1]);
-		this.size = randomNumber(0, 15);
+		this.size = randomNumber(0, 1);
 		this.keywordIndex = randomNumber(0, KEYWORDS.length);
 		this.brushIndex = randomNumber(0, BRUSHES.length);
 		this.opacity = Math.random();
-		this.speed = randomNumber(1, 5) / 100;
+		this.speed = randomNumber(1, 5) / 1000;
 	}
 
 	update() {
@@ -141,7 +141,7 @@ function initCanvas() {
 
 function initParticles() {
 	particles = [];
-	for (let i = 0; i < 5; i++) {
+	for (let i = 0; i < 10; i++) {
 		particles.push(new Particle());
 	}
 }
