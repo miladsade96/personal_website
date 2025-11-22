@@ -12,6 +12,7 @@ const BRUSHES = [
 	"#e67e22",
 	"#c0392b",
 ];
+
 const KEYWORDS = [
 	"Milad",
 	"Milad Sadeghi",
@@ -78,6 +79,31 @@ const KEYWORDS = [
 	"VSCode",
 	"Backend",
 	"K6",
+	"Redis",
+	"Spring AOP",
+	"Spring Security",
+	"Debezium",
+	"Multi-Threading",
+	"JWT",
+	"OAuth2",
+	"Lombok",
+	"Code Review",
+	"Bucket4J",
+	"Spring Cloud",
+	"Spring Cloud Config Client",
+	"Spring Cloud Config Server",
+	"Spring Cloud Gateway",
+	"RabbitMQ",
+	"Swagger",
+	"SpringDoc",
+	"OpenAPI",
+	"OpenFeign",
+	"Jakarta Validation",
+	"Docker Compose",
+	"Google Jib",
+	"BuildPacks",
+	"Paketo",
+	"WebHooks"
 ];
 
 // DOM Elements
